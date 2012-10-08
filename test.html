@@ -1,0 +1,54 @@
+<script src="lib/codemirror.js"></script>
+<link rel="stylesheet" href="lib/codemirror.css">
+<script src="mode/javascript/javascript.js"></script>
+<script src="mode/css/css.js"></script>
+<script src="mode/xml/xml.js"></script>
+<script src="mode/htmlmixed/htmlmixed.js"></script>
+<script src="lib/jquery.js"></script>
+<div id="tester">
+	<iframe src="" id="eliframe" frameborder="no"></iframe>
+</div>
+
+<div class="titulo" id="t-headtext2">Head</div>
+<div id="headtext2" class="codetext">
+	<textarea id="headtext"><title>Mi primer landing page</title>
+<meta name="description" content="Awesome Description Here">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="ROBOTS" CONTENT="INDEX, FOLLOW"></textarea>
+</div>
+
+<div class="titulo" id="t-bodytext2">Body</div>
+<div id="bodytext2" class="codetext">
+	<textarea id="bodytext"><div class="myDivclass" id="myDivid">
+	Hola Mundo
+</div></textarea>
+</div>
+<div class="titulo" id="t-csstext2">CSS</div>
+<div id="csstext2" class="codetext">
+	<textarea id="csstext">#myDivid{
+	width:940px;
+	color:#444;
+}
+.myDivclass{
+	border:1px solid #000;
+}</textarea>
+</div>
+<div class="titulo" id="t-javatext2">JavaScript</div>
+<div id="javatext2" class="codetext">
+	<textarea id="javatext"></textarea>
+	<div class="boton" onclick="updatePreview0();">Actualizar C&oacute;digo</div>
+	Incluir en resultado: <input type="checkbox" id="updateJava"/>
+</div>
+<div class="titulo" id="t-todotext2">Todo</div>
+<div id="todotext2" class="codetext">
+	<textarea id="todotext"></textarea>
+</div>
+<div class="titulo" id="t-descargar2">Opciones</div>
+<div id="descargar2" class="codetext">
+	<a id="downloadFile" target="_blank"><div class="boton" style="margin-top:10px;">Descargar Archivo</div></a>
+	<div class="boton" style="margin:10px 4px;" onclick="saveFile();">Guardar Archivo</div>
+	<div style="text-align:right;">Guardado Autom&aacute;tico: <span id="statusAG"></span></div>
+	<div style="padding:10px;" id="lesavedFiles"></div>
+</div>
+<script type="text/javascript" src="lib/main.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/main.css">

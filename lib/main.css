@@ -1,0 +1,57 @@
+.codetext, .titulo{
+	width:502px;
+	font-family: Arial;
+}
+.titulo{
+	background-color: 456;
+	color: white;
+	padding: 4px 0;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.CodeMirror{
+	width:500px;
+	border:1px solid #444;
+	font-size:15px;
+	background-color:#ccc;
+}
+.CodeMirror-scroll{
+	height:450px;
+}
+#tester{
+	position:absolute;
+	right:0;
+	top:0;
+	bottom:0;
+	width:750px;
+	overflow:hidden;
+	background-color: #ccc;
+}
+#eliframe{
+	margin:-250px -268px;
+	height: 1200px;
+	background-color: #fff;
+	width: 1280px;
+	transform:scale(0.7,0.7);
+	-ms-transform:scale(0.7,0.7); /* IE 9 */
+	-moz-transform:scale(0.7,0.7); /* Firefox */
+	-webkit-transform:scale(0.58,0.58); /* Safari and Chrome */
+	-o-transform:scale(0.7,0.7); /* Opera */
+}
+.boton{
+	background-color: #F75;
+	width: 48%;
+	text-align: center;
+	margin: 4px;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 6px;
+	color: white;
+	padding: 4px 0;
+}
+.boton:hover{
+	background-color: #e64;
+}

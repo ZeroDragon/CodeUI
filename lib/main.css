@@ -19,7 +19,7 @@
 	background-color:#ccc;
 }
 .CodeMirror-scroll{
-	height:450px;
+	height:400px;
 }
 #tester{
 	position:absolute;
@@ -27,19 +27,19 @@
 	top:0;
 	bottom:0;
 	width:750px;
-	overflow:hidden;
+	overflow:auto;
 	background-color: #ccc;
 }
 #eliframe{
-	margin:-250px -268px;
+	-margin:-250px -268px;
 	height: 1200px;
 	background-color: #fff;
 	width: 1280px;
-	transform:scale(0.7,0.7);
-	-ms-transform:scale(0.7,0.7); /* IE 9 */
-	-moz-transform:scale(0.7,0.7); /* Firefox */
-	-webkit-transform:scale(0.58,0.58); /* Safari and Chrome */
-	-o-transform:scale(0.7,0.7); /* Opera */
+	-transform:scale(0.7,0.7);
+	--ms-transform:scale(0.7,0.7); /* IE 9 */
+	--moz-transform:scale(0.7,0.7); /* Firefox */
+	--webkit-transform:scale(0.58,0.58); /* Safari and Chrome */
+	--o-transform:scale(0.7,0.7); /* Opera */
 }
 .boton{
 	background-color: #F75;

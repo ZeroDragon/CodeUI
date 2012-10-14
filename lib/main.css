@@ -102,3 +102,11 @@ Paleta:
 .hdele{
 	right:0px;
 }
+.errores{
+	text-align:right;
+	float:right;
+	background-color:#FF3900;
+	color:#FFFFFF;
+	padding:2px 4px;
+	font-size:12px;
+}

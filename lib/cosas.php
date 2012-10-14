@@ -19,10 +19,10 @@ if (isset($_POST)){
 
 function borraArchivo(){
 	global $bloqueadas;
-	if(in_array($_POST['cual'], $bloqueadas)) return 'Bloqueado';
+	if(in_array($_POST['cual'], $bloqueadas)) return 'Galeria bloqueada';
 	$path = '../public/'.$_POST['cual'].'/'.$_POST['file'];
 	unlink($path);
-	return 'Archivo Borrado';
+	return 'Ok';
 }
 
 function borraRecursivo($directory, $empty=FALSE){
@@ -76,13 +76,14 @@ function subeArchivo(){
 	global $bloqueadas;
 	$permitidos = array('png','jpg','bmp','jpeg','gif');
 	$ext = strtolower( array_pop(explode('.', $_FILES['elarchivo']['name'])) );
-	if(!in_array($ext, $permitidos)) return 'No permitido';
-	if(in_array($_POST['cual'], $bloqueadas)) return 'Bloqueado';
+	if(!in_array($ext, $permitidos)) return 'Tipo de archivo no permitido';
+	if($_FILES["elarchivo"]["size"] > 2000000) return 'Archivo mayor a 2mb';
+	if(in_array($_POST['cual'], $bloqueadas)) return 'Galeria bloqueada';
 	$dir = '../public/'.$_POST['cual'].'/';
 	$target_path = creaDir($dir);
 	$target_path = $target_path . basename( $_FILES['elarchivo']['name']); 
 	move_uploaded_file($_FILES['elarchivo']['tmp_name'], $target_path);
-	return 'Archivo Subido';
+	return 'Ok';
 }
 
 function traeGaleria(){

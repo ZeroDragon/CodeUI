@@ -2,8 +2,17 @@
 	width:502px;
 	font-family: Arial;
 }
+/*
+Paleta:
+	Azules
+		#0B61A4
+		#1049A9
+	Naranjas
+		#FFA400
+		#FF9200
+*/
 .titulo{
-	background-color: 456;
+	background-color: #0B61A4;
 	color: white;
 	padding: 4px 0;
 	text-align: center;
@@ -42,7 +51,7 @@
 	--o-transform:scale(0.7,0.7); /* Opera */
 }
 .boton{
-	background-color: #F75;
+	background-color: #FF9200;
 	width: 48%;
 	text-align: center;
 	margin: 4px;
@@ -53,5 +62,43 @@
 	padding: 4px 0;
 }
 .boton:hover{
-	background-color: #e64;
+	background-color: #FFA400;
+}
+#legaleria{
+	height: 140px;
+	overflow: auto;
+}
+.thumb{
+	width:100px;
+	height:100px;
+	display: inline-block;
+	margin:10px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	position:relative;
+}
+#leUsername{
+	cursor:pointer;
+}
+.hcopy, .hdele{
+	position: absolute;
+	bottom:0px;
+	width: 50%;
+	top:0px;
+	opacity: 0;
+	background-color: rgba(255,255,255,0.8);
+	text-align: center;
+	padding-top:44%;
+	font-size: 80%;
+	cursor: pointer;
+}
+.hcopy:hover,.hdele:hover{
+	opacity: 1;
+}
+.hcopy{
+	left:0px;
+}
+.hdele{
+	right:0px;
 }

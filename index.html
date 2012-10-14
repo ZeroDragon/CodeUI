@@ -47,6 +47,17 @@
 	<div class="boton" style="margin:10px 4px;" onclick="saveFile();">Guardar Archivo</div>
 	<div style="text-align:right;">Guardado Autom&aacute;tico: <span id="statusAG"></span></div>
 	<div style="padding:10px;" id="lesavedFiles"></div>
+	<div style="padding:10px;" id="legaleria_">
+		Galer&iacute;a <b id="leUsername"></b>
+		<div id="lecopytext" style="display:inline-block;"></div>
+	</div>
+	<div style="padding:10px;" id="legaleria"></div>
+	<form style="margin:0;padding:0;" id="subirarchivos">
+		<input type="hidden" name="action" value="subidera"/>
+		<input type="hidden" name="cual" id="cualSubidera"/>
+		<input style="display:inline-block;margin:0;padding:0;" type="file" name="elarchivo" id="userfile"/>
+		<input type="button" value="Subir Imagen" id="formsubmit" style="float:right;"/>
+	</form>
 </div>
 <script type="text/javascript" src="lib/main.js"></script>
 <link rel="stylesheet" type="text/css" href="lib/main.css">

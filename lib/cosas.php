@@ -1,6 +1,6 @@
 <?php
 getOldies();
-
+$bloqueadas = array('shared','clase1','clase2');
 if (isset($_POST)){
 	switch ($_POST['action']){
 		case 'traegaleria':
@@ -9,9 +9,20 @@ if (isset($_POST)){
 		case 'subidera':
 			echo subeArchivo();
 			break;
+		case 'borrado':
+			echo borraArchivo();
+			break;
 		default:
 			echo $_POST['action'];
 	}
+}
+
+function borraArchivo(){
+	global $bloqueadas;
+	if(in_array($_POST['cual'], $bloqueadas)) return 'Bloqueado';
+	$path = '../public/'.$_POST['cual'].'/'.$_POST['file'];
+	unlink($path);
+	return 'Archivo Borrado';
 }
 
 function borraRecursivo($directory, $empty=FALSE){
@@ -62,6 +73,11 @@ function creaDir($dir){
 }
 
 function subeArchivo(){
+	global $bloqueadas;
+	$permitidos = array('png','jpg','bmp','jpeg','gif');
+	$ext = strtolower( array_pop(explode('.', $_FILES['elarchivo']['name'])) );
+	if(!in_array($ext, $permitidos)) return 'No permitido';
+	if(in_array($_POST['cual'], $bloqueadas)) return 'Bloqueado';
 	$dir = '../public/'.$_POST['cual'].'/';
 	$target_path = creaDir($dir);
 	$target_path = $target_path . basename( $_FILES['elarchivo']['name']); 
@@ -83,5 +99,4 @@ function traeGaleria(){
 	$dir = creaDir($dir);
 	return json_encode($files);
 }
-
 ?>

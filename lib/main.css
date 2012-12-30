@@ -110,3 +110,11 @@ Paleta:
 	padding:2px 4px;
 	font-size:12px;
 }
+.hname{
+	background-color: rgba(0,0,0,0.4);
+	color:#fff;
+	padding:4px;
+}
+.thumb:hover .hname{
+	background-color: rgba(0,0,0,1);
+}
